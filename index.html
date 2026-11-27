@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Волкова Энже Сергеевна — ведущий инженер-сметчик в Санкт-Петербурге. Составление и проверка смет, НМЦК, акты КС-2 и КС-3, устранение замечаний госэкспертизы.">
+  <title>Энже Волкова — ведущий инженер-сметчик</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4efe8;
+      --bg-deep: #ece4d9;
+      --paper: #fffaf4;
+      --ink: #2a231d;
+      --ink-soft: #5c534b;
+      --muted: #7a7168;
+      --line: #e2d6c8;
+      --accent: #9c4a2f;
+      --accent-hover: #7e3a24;
+      --accent-soft: #f3e4dc;
+      --accent-ring: rgba(156, 74, 47, 0.22);
+      --shadow: 0 10px 28px rgba(42, 35, 29, 0.07);
+      --radius: 18px;
+      --max: 1080px;
+      --sans: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5.5rem;
+    }
+
+    body {
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 80% 50% at 100% -10%, rgba(156, 74, 47, 0.08), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 0% 20%, rgba(156, 74, 47, 0.05), transparent 50%),
+        var(--bg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+    a:hover { color: var(--accent-hover); }
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 2.5rem));
+      margin-inline: auto;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: color-mix(in srgb, var(--bg) 86%, white);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      min-height: 4.25rem;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .logo:hover { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.15rem 1.35rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+    .nav-short { display: none; }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) auto;
+      gap: 3.5rem;
+      align-items: center;
+      padding: 4.5rem 0 4.25rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.85rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 1.5rem;
+      height: 1.5px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(2.4rem, 5.2vw, 3.7rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.55rem;
+    }
+
+    .role {
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      font-weight: 500;
+      color: var(--ink-soft);
+      margin-bottom: 1.15rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.7rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.38rem 0.8rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+    }
+
+    .chip svg {
+      width: 15px;
+      height: 15px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.8;
+      flex-shrink: 0;
+    }
+
+    .nowrap { white-space: nowrap; }
+
+    .hero-lead {
+      max-width: 38rem;
+      color: var(--ink-soft);
+      margin-bottom: 1.7rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: #fffaf4;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.02rem;
+      padding: 0.85rem 1.35rem;
+      border-radius: 999px;
+      box-shadow: 0 6px 16px var(--accent-ring);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      color: #fffaf4;
+      transform: translateY(-1px);
+    }
+
+    .avatar-wrap {
+      position: relative;
+    }
+
+    /*
+      Как подставить настоящее фото:
+      1. Положите файл, например photo.jpg, в ту же папку, что и index.html.
+      2. Замените содержимое элемента .avatar ниже на:
+         <img src="photo.jpg" alt="Волкова Энже Сергеевна">
+      Круглая рамка и размер применятся автоматически.
+    */
+    .avatar {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background:
+        linear-gradient(160deg, #c56a4a 0%, var(--accent) 55%, #6e3322 100%);
+      color: #fffaf4;
+      display: grid;
+      place-items: center;
+      font-family: var(--serif);
+      font-size: 4.4rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      box-shadow:
+        0 0 0 8px var(--paper),
+        0 0 0 9px var(--line),
+        var(--shadow);
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Sections */
+    section {
+      padding: 1.25rem 0 3.5rem;
+    }
+
+    .section-head {
+      margin-bottom: 1.75rem;
+    }
+
+    .section-head h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-head p {
+      color: var(--ink-soft);
+      max-width: 46rem;
+    }
+
+    /* Services */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .service {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.35rem 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      width: 2.35rem;
+      height: 2.35rem;
+      border-radius: 10px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      margin-bottom: 0.85rem;
+    }
+
+    .service-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service h3 {
+      font-family: var(--serif);
+      font-size: 1.22rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .service p {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+    }
+
+    .service:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+
+    /* Timeline */
+    .timeline {
+      list-style: none;
+      position: relative;
+      padding-left: 0;
+    }
+
+    .job {
+      display: grid;
+      grid-template-columns: 13.5rem minmax(0, 1fr);
+      gap: 1.5rem 2rem;
+      position: relative;
+      padding: 0 0 2.15rem 0;
+    }
+
+    .job:last-child { padding-bottom: 0; }
+
+    .job-when {
+      text-align: right;
+      padding-top: 0.15rem;
+    }
+
+    .job-dates {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.98rem;
+      line-height: 1.35;
+    }
+
+    .job-duration {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 0.2rem;
+    }
+
+    .job-body {
+      position: relative;
+      padding-left: 1.85rem;
+      border-left: 1.5px solid var(--line);
+    }
+
+    .job-body::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 0.55rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+
+    .job h3 {
+      font-family: var(--serif);
+      font-size: 1.28rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+    }
+
+    .job-badge {
+      display: inline-block;
+      margin-left: 0.45rem;
+      vertical-align: 0.12em;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
+      padding: 0.14rem 0.5rem;
+      line-height: 1.2;
+    }
+
+    .job-role {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.98rem;
+      margin: 0.2rem 0 0.55rem;
+    }
+
+    .job-place {
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 0.92rem;
+      line-height: 1.45;
+      margin: 0.15rem 0 0.65rem;
+    }
+
+    .job ul {
+      padding-left: 1.1rem;
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+    }
+
+    .job li + li { margin-top: 0.28rem; }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .skill {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+    }
+
+    .skill span {
+      display: block;
+      font-weight: 500;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.05rem;
+    }
+
+    /* Education */
+    .edu {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .edu-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      box-shadow: var(--shadow);
+    }
+
+    .edu-year {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.4rem;
+    }
+
+    .edu-card h3 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+
+    .edu-card p { color: var(--ink-soft); font-size: 0.98rem; }
+
+    /* Contacts */
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.25rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 2rem 2.1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .contacts-grid h2 { margin-bottom: 0.45rem; }
+
+    .contact-note {
+      color: var(--ink-soft);
+      margin-bottom: 1.35rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .contact-list a {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .contact-list a:hover { color: var(--accent); }
+
+    .contact-icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-list small {
+      display: block;
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .contact-aside {
+      background: var(--bg-deep);
+      border-radius: 16px;
+      padding: 1.35rem 1.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.65rem;
+    }
+
+    .contact-aside p { color: var(--ink-soft); }
+    .contact-aside strong { color: var(--ink); font-weight: 600; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 1.5rem 0 2.25rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 800px) {
+      .wrap { width: min(var(--max), calc(100% - 1.6rem)); }
+      html { scroll-padding-top: 6.25rem; }
+
+      .nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.4rem;
+        padding: 0.7rem 0 0.6rem;
+        min-height: 0;
+      }
+
+      .nav-links {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 0.85rem;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links a {
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
+      .nav-full { display: none; }
+      .nav-short { display: inline; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 0.85rem;
+        padding: 1.9rem 0 2.75rem;
+      }
+
+      .hero-copy { display: contents; }
+      .hero .eyebrow { order: 1; justify-content: center; }
+      .hero .eyebrow::before { display: none; }
+      .hero h1 { order: 2; }
+      .hero .role { order: 3; margin-bottom: 0.35rem; }
+      .avatar-wrap { order: 4; margin: 0.35rem 0 0.55rem; }
+      .hero-meta { order: 5; justify-content: center; }
+      .hero-lead { order: 6; margin-inline: auto; margin-bottom: 1.15rem; }
+      .hero .btn { order: 7; }
+      .avatar { width: 132px; height: 132px; font-size: 2.7rem; }
+
+      .services,
+      .edu,
+      .contacts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .job {
+        display: block;
+        padding-left: 1.4rem;
+        border-left: 1.5px solid var(--line);
+        padding-bottom: 1.85rem;
+      }
+
+      .job-when {
+        text-align: left;
+        margin-bottom: 0.3rem;
+      }
+
+      .job-body {
+        padding-left: 0;
+        border-left: none;
+      }
+
+      .job-body::before { display: none; }
+
+      .job::before {
+        content: "";
+        position: absolute;
+        left: -6px;
+        top: 0.45rem;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 4px var(--accent-soft);
+      }
+
+      .contacts-grid { padding: 1.4rem 1.2rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  
+    /* Work samples */
+    .works {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .work {
+      display: grid;
+      grid-template-columns: 15rem minmax(0, 1fr);
+      gap: 1.5rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .work-thumb {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      cursor: zoom-in;
+    }
+
+    .work-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.25s ease;
+    }
+
+    .work-thumb:hover img { transform: scale(1.03); }
+
+    .work-tag {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    .work h3 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 0.35rem;
+    }
+
+    .work-desc {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .work-docs {
+      list-style: none;
+      display: grid;
+      gap: 0.15rem;
+      border-top: 1px solid var(--line);
+      padding-top: 0.6rem;
+    }
+
+    .doc-btn {
+      display: flex;
+      width: 100%;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.35rem 0.5rem;
+      margin-inline: -0.5rem;
+      width: calc(100% + 1rem);
+      background: none;
+      border: 0;
+      border-radius: 8px;
+      font: inherit;
+      font-size: 0.97rem;
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .doc-btn:hover { background: var(--accent-soft); color: var(--accent-hover); }
+
+    .doc-name {
+      text-decoration: underline;
+      text-decoration-color: var(--accent-ring);
+      text-underline-offset: 0.18em;
+    }
+
+    .doc-pages {
+      flex: none;
+      font-size: 0.86rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .works-note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Viewer */
+    .viewer[hidden],
+    .viewer [hidden] { display: none !important; }
+
+    .viewer {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      grid-template-columns: minmax(0, 1fr);
+      background: rgba(28, 23, 19, 0.94);
+      color: #f6efe6;
+    }
+
+    .viewer-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .viewer-title {
+      flex: 1;
+      min-width: 0;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .viewer-title small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #cbbfb2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .viewer-count {
+      flex: none;
+      max-width: 40%;
+      text-align: right;
+      font-size: 0.9rem;
+      color: #e6d9cb;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .viewer button {
+      font: inherit;
+      color: inherit;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .viewer button:hover { background: rgba(255, 255, 255, 0.2); }
+    .viewer button:disabled { opacity: 0.3; cursor: default; }
+
+    .viewer-close {
+      flex: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.4rem !important;
+      line-height: 1;
+    }
+
+    .viewer-stage {
+      position: relative;
+      overflow: hidden;
+      touch-action: none;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      min-height: 0;
+    }
+
+    .viewer-img {
+      max-width: calc(100% - 7rem);
+      max-height: calc(100% - 1.5rem);
+      width: auto;
+      height: auto;
+      background: #fff;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+      transform-origin: 0 0;
+      cursor: zoom-in;
+      -webkit-user-drag: none;
+    }
+
+    .viewer.zoomed .viewer-img { cursor: grab; }
+    .viewer.dragging .viewer-img { cursor: grabbing; }
+
+    .viewer-gap {
+      max-width: 26rem;
+      margin: 1rem;
+      padding: 2rem 1.75rem;
+      text-align: center;
+      border: 1px dashed rgba(255, 255, 255, 0.35);
+      border-radius: var(--radius);
+      font-size: 1.15rem;
+      line-height: 1.5;
+    }
+
+    .viewer-gap small {
+      display: block;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      color: #cbbfb2;
+    }
+
+    .viewer-loading {
+      position: absolute;
+      font-size: 0.9rem;
+      color: #cbbfb2;
+    }
+
+    .viewer-nav {
+      position: absolute;
+      top: 50%;
+      width: 2.9rem;
+      height: 2.9rem;
+      margin-top: -1.45rem;
+      font-size: 1.5rem !important;
+      line-height: 1;
+      z-index: 2;
+    }
+
+    .viewer-prev { left: 0.9rem; }
+    .viewer-next { right: 0.9rem; }
+
+    .viewer-hint {
+      padding: 0.55rem 1rem 0.75rem;
+      text-align: center;
+      font-size: 0.84rem;
+      color: #b9ab9c;
+    }
+
+    body.viewer-open { overflow: hidden; }
+
+    @media (max-width: 800px) {
+      .work {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.1rem;
+      }
+
+      .work-thumb { aspect-ratio: 16 / 9; }
+
+      .doc-btn { flex-direction: column; gap: 0; }
+
+      .viewer-img { max-width: 100%; max-height: 100%; }
+      .viewer-nav { top: auto; bottom: 0.75rem; margin-top: 0; background: rgba(28, 23, 19, 0.75) !important; }
+      .viewer-bar { padding: 0.55rem 0.75rem; gap: 0.6rem; }
+      .viewer-count { font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="#top">Энже Волкова</a>
+      <ul class="nav-links">
+        <li><a href="#help"><span class="nav-full">Чем могу помочь</span><span class="nav-short">Помощь</span></a></li>
+        <li><a href="#experience">Опыт</a></li>
+        <li><a href="#works">Примеры работ</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#education">Образование</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Санкт-Петербург</p>
+        <h1>Энже Волкова</h1>
+        <p class="role">Ведущий инженер-сметчик</p>
+        <div class="hero-meta">
+          <span class="chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Более 15 лет опыта
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.4-7-11a7 7 0 1 1 14 0c0 5.6-7 11-7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+            Удалённый или гибридный формат
+          </span>
+          <span class="chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11h18M5.5 19h13M7 11V7l5-3 5 3v4"/><path d="M8.5 19v-4h7v4"/></svg>
+            Готова к командировкам
+          </span>
+        </div>
+        <p class="hero-lead">Составляю и проверяю сметную документацию на строительство, ремонт и реконструкцию — от НМЦК, проекта сметы контракта (ПСК) и ПСД до актов выполненных работ и устранения замечаний государственной экспертизы.</p>
+        <a class="btn" href="#contacts">Связаться</a>
+      </div>
+      <div class="avatar-wrap">
+        <!--
+          Чтобы подставить настоящее фото, положите файл (например, photo.jpg)
+          в ту же папку, что и index.html, и замените содержимое блока .avatar на:
+          <img src="photo.jpg" alt="Волкова Энже Сергеевна">
+          Круглая рамка применится автоматически.
+        -->
+        <div class="avatar"><img src="data:image/jpeg;base64,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" alt="Волкова Энже Сергеевна"></div>
+      </div>
+    </div>
+
+    <section id="help">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Чем могу помочь</h2>
+          <p>Работаю с заказчиками, подрядчиками и проектными организациями на всех этапах строительства, ремонта и реконструкции. Использую сметно-нормативные базы ФЕР, ТЕР и ГЭСН в программе <span class="nowrap">Гранд-Смета</span>.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 3h10v4H7zM5 7h14v14H5z"/><path d="M9 11h6M9 15h4"/></svg>
+            </div>
+            <h3>Сметы на СМР</h3>
+            <p>Составление смет на строительно-монтажные работы: кровля, архитектурные решения, наружные и внутренние инженерные системы (ОВ, ВК), электромонтаж, монтаж оборудования, ПНР, слаботочные системы и автоматизация.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 10h6M9 14h6M9 18h3"/></svg>
+            </div>
+            <h3>Коммерческие сметы</h3>
+            <p>Составление коммерческих смет по вашим расценкам или на основании расценок сметно-нормативной базы РФ (СНБ РФ).</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9l2.2 2.2L15 7"/></svg>
+            </div>
+            <h3>Проверка смет и ПСД</h3>
+            <p>Проверка сметной документации на соответствие нормативам, техническому заданию, объёмам работ по проекту и правильности применения расценок. Подготовка замечаний.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V5h12l4 4v10z"/><path d="M16 5v4h4M8 13h8M8 16h5"/></svg>
+            </div>
+            <h3>НМЦК и смета контракта</h3>
+            <p>Расчёт начальной (максимальной) цены контракта и проекта сметы контракта с учётом индексов фактической и прогнозной инфляции.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 7V4h8v3"/><path d="M6 7h12v13H6z"/><path d="M9 12h6M9 16h4"/></svg>
+            </div>
+            <h3>КС-2, КС-3, М-29, КС-6</h3>
+            <p>Составление, проверка и визирование актов выполненных работ и исполнительной документации, согласование с заказчиком.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Устранение замечаний госэкспертизы</h3>
+            <p>Разработка, проверка и устранение замечаний в сметной документации в соответствии с заключением государственной экспертизы.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V8l5 3 6-6 5 4"/><path d="M4 19h16"/></svg>
+            </div>
+            <h3>Укрупнённые расчёты</h3>
+            <p>Разработка укрупнённых сметных расчётов для определения лимита финансирования.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+            </div>
+            <h3>Разработка конъюнктурного анализа цен</h3>
+            <p>Подготовка конъюнктурного анализа цен на материалы, оборудование и работы для обоснования стоимости в смете.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Опыт работы</h2>
+          <p>Более 15 лет в сметном деле: составление, проверка и сопровождение документации.</p>
+        </div>
+        <ol class="timeline">
+          <li class="job">
+            <div class="job-when">
+              <div class="job-dates">1 год 6 месяцев</div>
+              <span class="job-duration">Санкт-Петербург</span>
+            </div>
+            <div class="job-body">
+              <h3>ООО «Энкорс»</h3>
+              <p class="job-role">Инженер-сметчик</p>
+              <p class="job-place">Инжиниринговая компания: проектирование, строительство, монтаж и модернизация объектов электроснабжения.</p>
+              <ul>
+                <li>Составление смет на электромонтажные работы (ЭОМ, ЭМ), монтаж оборудования и пусконаладочные работы — новое строительство, реконструкция и техническое перевооружение объектов электроснабжения.</li>
+                <li>Подсчёт объёмов работ по проектной и рабочей документации, разработка смет в составе ПСД.</li>
+                <li>Составление и проверка форм КС-2, КС-3 и М-29, согласование смет и выполнений с заказчиком.</li>
+                <li>Разработка конъюнктурного анализа цен на оборудование и материалы.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-when">
+              <div class="job-dates">1 год 6 месяцев</div>
+            </div>
+            <div class="job-body">
+              <h3>ООО «СЗРК»</h3>
+              <p class="job-role">Инженер-сметчик</p>
+              <ul>
+                <li>Составление смет на СМР: кровля, АР, наружные и внутренние инженерные системы (ОВ, ВК), электромонтажные работы, монтаж оборудования, ПНР.</li>
+                <li>Составление КС-2, КС-3, М-29, КС-6 и согласование с заказчиком.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-when">
+              <div class="job-dates">Июль 2017 — май 2023</div>
+            </div>
+            <div class="job-body">
+              <h3>СПб ГБУЗ</h3>
+              <p class="job-role">Ведущий инженер-сметчик</p>
+              <ul>
+                <li>Разработка и проверка смет на строительство, ремонт и реконструкцию: соответствие нормативам, техническому заданию и методическим указаниям по СБЦ.</li>
+                <li>Проверка смет в составе проектно-сметной документации, подготовка замечаний.</li>
+                <li>Укрупнённые сметные расчёты для определения лимита финансирования.</li>
+                <li>Проверка и визирование актов КС-2, в том числе актов включаемых и исключаемых работ, и исполнительной сметной документации.</li>
+                <li>Устранение замечаний по заключению СПб ГАУ «Центр государственной экспертизы».</li>
+                <li>Расчёт НМЦК и проекта сметы контракта с учётом индексов фактической и прогнозной инфляции.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-when">
+              <div class="job-dates">Август 2015 — октябрь 2015</div>
+              <span class="job-duration">3 месяца</span>
+            </div>
+            <div class="job-body">
+              <h3>ООО «СМТ»</h3>
+              <p class="job-role">Инженер-сметчик</p>
+              <ul>
+                <li>Сметы на наружные и внутренние инженерные системы (ОВ, ВК), электромонтаж, монтаж оборудования, УУТП, ИТП, слаботочные системы (ОПС, СС), автоматизацию и ПНР.</li>
+                <li>Проверка смет на СМР от проектной организации и формирование замечаний.</li>
+                <li>Среди объектов — реконструкция здания РОВД и гарнизонной гаупвахты на 80 военнослужащих.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-when">
+              <div class="job-dates">Май 2013 — август 2015</div>
+              <span class="job-duration">2 года 4 месяца · Санкт-Петербург</span>
+            </div>
+            <div class="job-body">
+              <h3>ООО «Стройнева»</h3>
+              <p class="job-role">Инженер-сметчик</p>
+              <ul>
+                <li>Сметы на СМР: кровля, АР, инженерные системы (ОВ, ВК), электромонтаж, монтаж оборудования, ПНР.</li>
+                <li>Составление КС-2, КС-3, М-29, КС-6 и согласование с заказчиком.</li>
+                <li>Проверка смет подрядчика на правильность расценок, соответствие нормам и объёмам работ по проектной документации.</li>
+                <li>Ведение реестров смет и выполнений по объектам компании, в том числе по подрядчикам.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-when">
+              <div class="job-dates">Апрель 2011 — май 2013</div>
+              <span class="job-duration">2 года 2 месяца · Санкт-Петербург</span>
+            </div>
+            <div class="job-body">
+              <h3>ООО «НСК»</h3>
+              <p class="job-role">Инженер-сметчик</p>
+              <ul>
+                <li>Сметы на СМР (АР, ОВ, ВК, электрика и др.), ремонтные работы и ПНР; составление ССР, КС-2, КС-3, М-29, КС-6.</li>
+                <li>Ведение реестров смет и выполнений по всем объектам.</li>
+                <li>Взаимодействие с поставщиками.</li>
+                <li>Согласование смет с заказчиками.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="works">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Примеры работ</h2>
+          <p>Сметная документация, разработанная мной для объектов разного назначения. Названия заказчиков, адреса и реквизиты поставщиков скрыты. Нажмите на документ, чтобы посмотреть его листы.</p>
+        </div>
+        <div class="works">
+          <article class="work">
+            <button type="button" class="work-thumb" data-doc="remont-administracii/ssr" aria-label="Открыть: Сводный сметный расчёт (исполнительный)">
+              <img src="works/remont-administracii/thumb.webp" alt="" loading="lazy" width="640" height="453">
+            </button>
+            <div class="work-body">
+              <p class="work-tag">Исполнительная документация</p>
+              <h3>Текущий ремонт 1 и 2 этажа администрации учреждения</h3>
+              <p class="work-desc">Исполнительная сметная документация: ИЛСР, сводный сметный расчёт, ведомость объёмов, расчёты включаемых и исключаемых работ, сопоставительная ведомость.</p>
+              <ul class="work-docs">
+              <li><button type="button" class="doc-btn" data-doc="remont-administracii/ssr"><span class="doc-name">Сводный сметный расчёт (исполнительный)</span><span class="doc-pages">2 листа</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="remont-administracii/ilsr"><span class="doc-name">Исполнительный локальный сметный расчёт</span><span class="doc-pages">38 листов · показаны 1–2 и 37–38</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="remont-administracii/vor"><span class="doc-name">Исполнительная ведомость объёмов работ</span><span class="doc-pages">7 листов · показаны 1–2 и 6–7</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="remont-administracii/vklyuchaemye"><span class="doc-name">Расчёт стоимости включаемых работ</span><span class="doc-pages">17 листов · показаны 1–2 и 16–17</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="remont-administracii/isklyuchaemye"><span class="doc-name">Расчёт стоимости исключаемых работ</span><span class="doc-pages">17 листов · показаны 1–2 и 16–17</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="remont-administracii/sopostavitelnaya"><span class="doc-name">Сопоставительная ведомость</span><span class="doc-pages">7 листов · показаны 1–2 и 6–7</span></button></li>
+              </ul>
+            </div>
+          </article>
+          <article class="work">
+            <button type="button" class="work-thumb" data-doc="zhenskaya-konsultaciya/ssr" aria-label="Открыть: Сводный сметный расчёт">
+              <img src="works/zhenskaya-konsultaciya/thumb.webp" alt="" loading="lazy" width="640" height="453">
+            </button>
+            <div class="work-body">
+              <p class="work-tag">Сметная документация</p>
+              <h3>Текущий ремонт 2 этажа женской консультации</h3>
+              <p class="work-desc">Сводный сметный расчёт, локальные сметы по разделам АР, ЭОМ, ВК, ОВ, СС и уборке мусора, конъюнктурный анализ цен.</p>
+              <ul class="work-docs">
+              <li><button type="button" class="doc-btn" data-doc="zhenskaya-konsultaciya/ssr"><span class="doc-name">Сводный сметный расчёт</span><span class="doc-pages">2 листа</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="zhenskaya-konsultaciya/lsr-ar"><span class="doc-name">ЛСР — АР (архитектурные решения)</span><span class="doc-pages">22 листа · показаны 1–2 и 21–22</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="zhenskaya-konsultaciya/lsr-eom"><span class="doc-name">ЛСР — ЭОМ (электрооборудование и освещение)</span><span class="doc-pages">10 листов · показаны 1–2 и 9–10</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="zhenskaya-konsultaciya/lsr-vk"><span class="doc-name">ЛСР — ВК (водоснабжение и канализация)</span><span class="doc-pages">6 листов · показаны 1–2 и 5–6</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="zhenskaya-konsultaciya/lsr-ov"><span class="doc-name">ЛСР — ОВ (отопление и вентиляция)</span><span class="doc-pages">8 листов · показаны 1–2 и 7–8</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="zhenskaya-konsultaciya/lsr-ss"><span class="doc-name">ЛСР — СС (слаботочные системы)</span><span class="doc-pages">8 листов · показаны 1–2 и 7–8</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="zhenskaya-konsultaciya/lsr-musor"><span class="doc-name">ЛСР — уборка мусора</span><span class="doc-pages">3 листа</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="zhenskaya-konsultaciya/kac"><span class="doc-name">Конъюнктурный анализ</span><span class="doc-pages">8 листов · показаны 1–2 и 7–8</span></button></li>
+              </ul>
+            </div>
+          </article>
+          <article class="work">
+            <button type="button" class="work-thumb" data-doc="medgazy/ssr" aria-label="Открыть: Сводный сметный расчёт">
+              <img src="works/medgazy/thumb.webp" alt="" loading="lazy" width="640" height="453">
+            </button>
+            <div class="work-body">
+              <p class="work-tag">Сметная документация</p>
+              <h3>Переустройство сети медицинского газоснабжения</h3>
+              <p class="work-desc">Сводный и объектный сметные расчёты, локальные сметы АР, НМГ и ТХ, конъюнктурный анализ цен.</p>
+              <ul class="work-docs">
+              <li><button type="button" class="doc-btn" data-doc="medgazy/ssr"><span class="doc-name">Сводный сметный расчёт</span><span class="doc-pages">2 листа</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="medgazy/osr"><span class="doc-name">Объектный сметный расчёт</span><span class="doc-pages">2 листа</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="medgazy/lsr-ar"><span class="doc-name">ЛСР — АР (архитектурно-строительные решения)</span><span class="doc-pages">4 листа</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="medgazy/lsr-nmg"><span class="doc-name">ЛСР — НМГ (наружное медицинское газоснабжение)</span><span class="doc-pages">7 листов · показаны 1–2 и 6–7</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="medgazy/lsr-th"><span class="doc-name">ЛСР — ТХ (технологические решения)</span><span class="doc-pages">6 листов · показаны 1–2 и 5–6</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="medgazy/kac"><span class="doc-name">Конъюнктурный анализ цен</span><span class="doc-pages">7 листов · показаны 1–2 и 6–7</span></button></li>
+              </ul>
+            </div>
+          </article>
+          <article class="work">
+            <button type="button" class="work-thumb" data-doc="energokompleks/ssr" aria-label="Открыть: Сводный сметный расчёт">
+              <img src="works/energokompleks/thumb.webp" alt="" loading="lazy" width="640" height="453">
+            </button>
+            <div class="work-body">
+              <p class="work-tag">Сметная документация</p>
+              <h3>Строительство энергетического комплекса</h3>
+              <p class="work-desc">Сводный сметный расчёт и локальные сметы: ПЗУ, покрытия, конструктивные и технологические решения, наружные сети, электроснабжение и газоснабжение.</p>
+              <ul class="work-docs">
+              <li><button type="button" class="doc-btn" data-doc="energokompleks/ssr"><span class="doc-name">Сводный сметный расчёт</span><span class="doc-pages">2 листа</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="energokompleks/lsr-pzu"><span class="doc-name">ЛСР — ПЗУ (планировочная организация участка)</span><span class="doc-pages">4 листа</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="energokompleks/lsr-pokrytiya"><span class="doc-name">ЛСР — щебёночные покрытия</span><span class="doc-pages">6 листов · показаны 1–2 и 5–6</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="energokompleks/lsr-kr"><span class="doc-name">ЛСР — КР (конструктивные решения)</span><span class="doc-pages">35 листов · показаны 1–2 и 34–35</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="energokompleks/lsr-th"><span class="doc-name">ЛСР — ТХ (технологические решения, ИОС7)</span><span class="doc-pages">4 листа</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="energokompleks/lsr-nar-seti"><span class="doc-name">ЛСР — наружные сети (ИОС5)</span><span class="doc-pages">10 листов · показаны 1–2 и 9–10</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="energokompleks/lsr-en"><span class="doc-name">ЛСР — наружное электроснабжение (ИОС1)</span><span class="doc-pages">12 листов · показаны 1–2 и 11–12</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="energokompleks/lsr-gaz"><span class="doc-name">ЛСР — наружное газоснабжение (ИОС6)</span><span class="doc-pages">16 листов · показаны 1–2 и 15–16</span></button></li>
+              </ul>
+            </div>
+          </article>
+          <article class="work">
+            <button type="button" class="work-thumb" data-doc="transformatory/ssr" aria-label="Открыть: Сводный сметный расчёт">
+              <img src="works/transformatory/thumb.webp" alt="" loading="lazy" width="640" height="453">
+            </button>
+            <div class="work-body">
+              <p class="work-tag">Исполнительная документация</p>
+              <h3>Замена силовых трансформаторов на производственном предприятии</h3>
+              <p class="work-desc">Сводный сметный расчёт, исполнительные локальные сметы по электроснабжению и вентиляции, конъюнктурный анализ.</p>
+              <ul class="work-docs">
+              <li><button type="button" class="doc-btn" data-doc="transformatory/ssr"><span class="doc-name">Сводный сметный расчёт</span><span class="doc-pages">2 листа</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="transformatory/ilsr-es1"><span class="doc-name">Исполнительная ЛСР — замена силовых трансформаторов</span><span class="doc-pages">31 лист · показаны 1–2 и 30–31</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="transformatory/ilsr-es2"><span class="doc-name">Исполнительная ЛСР — замена оборудования РУ 0,4 кВ</span><span class="doc-pages">32 листа · показаны 1–2 и 31–32</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="transformatory/ilsr-ov"><span class="doc-name">Исполнительная ЛСР — система вентиляции</span><span class="doc-pages">25 листов · показаны 1–2 и 24–25</span></button></li>
+              <li><button type="button" class="doc-btn" data-doc="transformatory/ka"><span class="doc-name">Конъюнктурный анализ цен</span><span class="doc-pages">3 листа</span></button></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <p class="works-note">Из каждого документа показаны первые и последние листы — по ним видны структура, объём и итоговые суммы.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Навыки</h2>
+          <p>Владею программой <span class="nowrap">Гранд-Смета</span> и применяю инструменты на основе искусственного интеллекта для проверки и подготовки смет, что позволяет сокращать сроки разработки сметной документации и снижать количество ошибок.</p>
+        </div>
+        <div class="skills">
+          <div class="skill">Гранд-Смета</div>
+          <div class="skill">ФЕР</div>
+          <div class="skill">ТЕР</div>
+          <div class="skill">ГЭСН</div>
+          <div class="skill">Сметный калькулятор</div>
+          <div class="skill">Технологии ИИ в сметном деле: сокращение сроков и снижение ошибок</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Образование</h2>
+        </div>
+        <div class="edu">
+          <article class="edu-card">
+            <div class="edu-year">2021</div>
+            <h3>Санкт-Петербургский государственный архитектурно-строительный университет (СПбГАСУ)</h3>
+            <p>Факультет дополнительного образования. Повышение квалификации: «Ценообразование и сметное нормирование в строительстве».</p>
+          </article>
+          <article class="edu-card">
+            <div class="edu-year">2015</div>
+            <h3>ИПКП ФГБОУ ВПО ПГУПС</h3>
+            <p>Институт повышения квалификации и переподготовки. Повышение квалификации: «Особенности сметной документации в строительстве».</p>
+          </article>
+          <article class="edu-card">
+            <div class="edu-year">2008</div>
+            <h3>Петербургский государственный университет путей сообщения</h3>
+            <p>Учебно-курсовой комбинат, Санкт-Петербург. Повышение квалификации: «Специалист-сметчик».</p>
+          </article>
+          <article class="edu-card">
+            <div class="edu-year">2002</div>
+            <h3>Российский государственный гидрометеорологический университет</h3>
+            <p>Санкт-Петербург, специальность «Гидрология».</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts">
+      <div class="wrap">
+        <div class="contacts-grid">
+          <div>
+            <h2>Контакты</h2>
+            <p class="contact-note">Напишите или позвоните — предпочитаемый способ связи указан ниже.</p>
+            <ul class="contact-list">
+              <li>
+                <a href="mailto:enzhe.volkova@yandex.ru">
+                  <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
+                  </span>
+                  <span>
+                    enzhe.volkova@yandex.ru
+                    <small>Предпочитаемый способ связи</small>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+79522055751">
+                  <span class="contact-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M7 3h4l1.5 4-2.2 1.6a12 12 0 0 0 5.1 5.1L17 11.5 21 13v4c0 1-1 2-2.2 2C9.5 19 5 10.8 5 5.2 5 4 6 3 7 3z"/></svg>
+                  </span>
+                  <span>
+                    +7 (952) 205-57-51
+                    <small>Телефон</small>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <aside class="contact-aside">
+            <p><strong>Волкова Энже Сергеевна</strong></p>
+            <p>Ведущий инженер-сметчик</p>
+            <p>Санкт-Петербург</p>
+            <p>Рассматриваю удалённый или гибридный формат работы, готова к командировкам</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>Волкова Энже Сергеевна</span>
+      <span>Санкт-Петербург</span>
+    </div>
+  </footer>
+
+  <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Просмотр документа" hidden>
+    <div class="viewer-bar">
+      <div class="viewer-title"></div>
+      <div class="viewer-count" aria-live="polite"></div>
+      <button type="button" class="viewer-close" aria-label="Закрыть">×</button>
+    </div>
+    <div class="viewer-stage">
+      <button type="button" class="viewer-nav viewer-prev" aria-label="Предыдущий лист">‹</button>
+      <span class="viewer-loading">Загрузка…</span>
+      <img class="viewer-img" alt="" draggable="false" hidden>
+      <div class="viewer-gap" hidden></div>
+      <button type="button" class="viewer-nav viewer-next" aria-label="Следующий лист">›</button>
+    </div>
+    <p class="viewer-hint">Нажмите на лист, чтобы увеличить, и перетаскивайте для просмотра · ← → листать · Esc закрыть</p>
+  </div>
+  <script type="application/json" id="works-data">[{"slug": "remont-administracii", "title": "Текущий ремонт 1 и 2 этажа администрации учреждения", "tag": "Исполнительная документация", "desc": "Исполнительная сметная документация: ИЛСР, сводный сметный расчёт, ведомость объёмов, расчёты включаемых и исключаемых работ, сопоставительная ведомость.", "docs": [{"id": "remont-administracii/ssr", "name": "Сводный сметный расчёт (исполнительный)", "total": 2, "pages": [{"n": 1, "src": "works/remont-administracii/ssr-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/remont-administracii/ssr-p02.webp", "w": 1400, "h": 990}]}, {"id": "remont-administracii/ilsr", "name": "Исполнительный локальный сметный расчёт", "total": 38, "pages": [{"n": 1, "src": "works/remont-administracii/ilsr-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/remont-administracii/ilsr-p02.webp", "w": 1400, "h": 990}, {"n": 37, "src": "works/remont-administracii/ilsr-p37.webp", "w": 1400, "h": 990}, {"n": 38, "src": "works/remont-administracii/ilsr-p38.webp", "w": 1400, "h": 990}]}, {"id": "remont-administracii/vor", "name": "Исполнительная ведомость объёмов работ", "total": 7, "pages": [{"n": 1, "src": "works/remont-administracii/vor-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/remont-administracii/vor-p02.webp", "w": 1400, "h": 990}, {"n": 6, "src": "works/remont-administracii/vor-p06.webp", "w": 1400, "h": 990}, {"n": 7, "src": "works/remont-administracii/vor-p07.webp", "w": 1400, "h": 990}]}, {"id": "remont-administracii/vklyuchaemye", "name": "Расчёт стоимости включаемых работ", "total": 17, "pages": [{"n": 1, "src": "works/remont-administracii/vklyuchaemye-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/remont-administracii/vklyuchaemye-p02.webp", "w": 1400, "h": 990}, {"n": 16, "src": "works/remont-administracii/vklyuchaemye-p16.webp", "w": 1400, "h": 990}, {"n": 17, "src": "works/remont-administracii/vklyuchaemye-p17.webp", "w": 1400, "h": 990}]}, {"id": "remont-administracii/isklyuchaemye", "name": "Расчёт стоимости исключаемых работ", "total": 17, "pages": [{"n": 1, "src": "works/remont-administracii/isklyuchaemye-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/remont-administracii/isklyuchaemye-p02.webp", "w": 1400, "h": 990}, {"n": 16, "src": "works/remont-administracii/isklyuchaemye-p16.webp", "w": 1400, "h": 990}, {"n": 17, "src": "works/remont-administracii/isklyuchaemye-p17.webp", "w": 1400, "h": 990}]}, {"id": "remont-administracii/sopostavitelnaya", "name": "Сопоставительная ведомость", "total": 7, "pages": [{"n": 1, "src": "works/remont-administracii/sopostavitelnaya-p01.webp", "w": 1800, "h": 1273}, {"n": 2, "src": "works/remont-administracii/sopostavitelnaya-p02.webp", "w": 1800, "h": 1273}, {"n": 6, "src": "works/remont-administracii/sopostavitelnaya-p06.webp", "w": 1800, "h": 1273}, {"n": 7, "src": "works/remont-administracii/sopostavitelnaya-p07.webp", "w": 1800, "h": 1273}]}], "thumb": "works/remont-administracii/thumb.webp"}, {"slug": "zhenskaya-konsultaciya", "title": "Текущий ремонт 2 этажа женской консультации", "tag": "Сметная документация", "desc": "Сводный сметный расчёт, локальные сметы по разделам АР, ЭОМ, ВК, ОВ, СС и уборке мусора, конъюнктурный анализ цен.", "docs": [{"id": "zhenskaya-konsultaciya/ssr", "name": "Сводный сметный расчёт", "total": 2, "pages": [{"n": 1, "src": "works/zhenskaya-konsultaciya/ssr-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/zhenskaya-konsultaciya/ssr-p02.webp", "w": 1400, "h": 990}]}, {"id": "zhenskaya-konsultaciya/lsr-ar", "name": "ЛСР — АР (архитектурные решения)", "total": 22, "pages": [{"n": 1, "src": "works/zhenskaya-konsultaciya/lsr-ar-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/zhenskaya-konsultaciya/lsr-ar-p02.webp", "w": 1400, "h": 990}, {"n": 21, "src": "works/zhenskaya-konsultaciya/lsr-ar-p21.webp", "w": 1400, "h": 990}, {"n": 22, "src": "works/zhenskaya-konsultaciya/lsr-ar-p22.webp", "w": 1400, "h": 990}]}, {"id": "zhenskaya-konsultaciya/lsr-eom", "name": "ЛСР — ЭОМ (электрооборудование и освещение)", "total": 10, "pages": [{"n": 1, "src": "works/zhenskaya-konsultaciya/lsr-eom-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/zhenskaya-konsultaciya/lsr-eom-p02.webp", "w": 1400, "h": 990}, {"n": 9, "src": "works/zhenskaya-konsultaciya/lsr-eom-p09.webp", "w": 1400, "h": 990}, {"n": 10, "src": "works/zhenskaya-konsultaciya/lsr-eom-p10.webp", "w": 1400, "h": 990}]}, {"id": "zhenskaya-konsultaciya/lsr-vk", "name": "ЛСР — ВК (водоснабжение и канализация)", "total": 6, "pages": [{"n": 1, "src": "works/zhenskaya-konsultaciya/lsr-vk-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/zhenskaya-konsultaciya/lsr-vk-p02.webp", "w": 1400, "h": 990}, {"n": 5, "src": "works/zhenskaya-konsultaciya/lsr-vk-p05.webp", "w": 1400, "h": 990}, {"n": 6, "src": "works/zhenskaya-konsultaciya/lsr-vk-p06.webp", "w": 1400, "h": 990}]}, {"id": "zhenskaya-konsultaciya/lsr-ov", "name": "ЛСР — ОВ (отопление и вентиляция)", "total": 8, "pages": [{"n": 1, "src": "works/zhenskaya-konsultaciya/lsr-ov-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/zhenskaya-konsultaciya/lsr-ov-p02.webp", "w": 1400, "h": 990}, {"n": 7, "src": "works/zhenskaya-konsultaciya/lsr-ov-p07.webp", "w": 1400, "h": 990}, {"n": 8, "src": "works/zhenskaya-konsultaciya/lsr-ov-p08.webp", "w": 1400, "h": 990}]}, {"id": "zhenskaya-konsultaciya/lsr-ss", "name": "ЛСР — СС (слаботочные системы)", "total": 8, "pages": [{"n": 1, "src": "works/zhenskaya-konsultaciya/lsr-ss-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/zhenskaya-konsultaciya/lsr-ss-p02.webp", "w": 1400, "h": 990}, {"n": 7, "src": "works/zhenskaya-konsultaciya/lsr-ss-p07.webp", "w": 1400, "h": 990}, {"n": 8, "src": "works/zhenskaya-konsultaciya/lsr-ss-p08.webp", "w": 1400, "h": 990}]}, {"id": "zhenskaya-konsultaciya/lsr-musor", "name": "ЛСР — уборка мусора", "total": 3, "pages": [{"n": 1, "src": "works/zhenskaya-konsultaciya/lsr-musor-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/zhenskaya-konsultaciya/lsr-musor-p02.webp", "w": 1400, "h": 990}, {"n": 3, "src": "works/zhenskaya-konsultaciya/lsr-musor-p03.webp", "w": 1400, "h": 990}]}, {"id": "zhenskaya-konsultaciya/kac", "name": "Конъюнктурный анализ", "total": 8, "pages": [{"n": 1, "src": "works/zhenskaya-konsultaciya/kac-p01.webp", "w": 1800, "h": 1273}, {"n": 2, "src": "works/zhenskaya-konsultaciya/kac-p02.webp", "w": 1800, "h": 1273}, {"n": 7, "src": "works/zhenskaya-konsultaciya/kac-p07.webp", "w": 1800, "h": 1273}, {"n": 8, "src": "works/zhenskaya-konsultaciya/kac-p08.webp", "w": 1800, "h": 1273}]}], "thumb": "works/zhenskaya-konsultaciya/thumb.webp"}, {"slug": "medgazy", "title": "Переустройство сети медицинского газоснабжения", "tag": "Сметная документация", "desc": "Сводный и объектный сметные расчёты, локальные сметы АР, НМГ и ТХ, конъюнктурный анализ цен.", "docs": [{"id": "medgazy/ssr", "name": "Сводный сметный расчёт", "total": 2, "pages": [{"n": 1, "src": "works/medgazy/ssr-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/medgazy/ssr-p02.webp", "w": 1400, "h": 990}]}, {"id": "medgazy/osr", "name": "Объектный сметный расчёт", "total": 2, "pages": [{"n": 1, "src": "works/medgazy/osr-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/medgazy/osr-p02.webp", "w": 1400, "h": 990}]}, {"id": "medgazy/lsr-ar", "name": "ЛСР — АР (архитектурно-строительные решения)", "total": 4, "pages": [{"n": 1, "src": "works/medgazy/lsr-ar-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/medgazy/lsr-ar-p02.webp", "w": 1400, "h": 990}, {"n": 3, "src": "works/medgazy/lsr-ar-p03.webp", "w": 1400, "h": 990}, {"n": 4, "src": "works/medgazy/lsr-ar-p04.webp", "w": 1400, "h": 990}]}, {"id": "medgazy/lsr-nmg", "name": "ЛСР — НМГ (наружное медицинское газоснабжение)", "total": 7, "pages": [{"n": 1, "src": "works/medgazy/lsr-nmg-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/medgazy/lsr-nmg-p02.webp", "w": 1400, "h": 990}, {"n": 6, "src": "works/medgazy/lsr-nmg-p06.webp", "w": 1400, "h": 990}, {"n": 7, "src": "works/medgazy/lsr-nmg-p07.webp", "w": 1400, "h": 990}]}, {"id": "medgazy/lsr-th", "name": "ЛСР — ТХ (технологические решения)", "total": 6, "pages": [{"n": 1, "src": "works/medgazy/lsr-th-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/medgazy/lsr-th-p02.webp", "w": 1400, "h": 990}, {"n": 5, "src": "works/medgazy/lsr-th-p05.webp", "w": 1400, "h": 990}, {"n": 6, "src": "works/medgazy/lsr-th-p06.webp", "w": 1400, "h": 990}]}, {"id": "medgazy/kac", "name": "Конъюнктурный анализ цен", "total": 7, "pages": [{"n": 1, "src": "works/medgazy/kac-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/medgazy/kac-p02.webp", "w": 1400, "h": 990}, {"n": 6, "src": "works/medgazy/kac-p06.webp", "w": 1400, "h": 990}, {"n": 7, "src": "works/medgazy/kac-p07.webp", "w": 1400, "h": 990}]}], "thumb": "works/medgazy/thumb.webp"}, {"slug": "energokompleks", "title": "Строительство энергетического комплекса", "tag": "Сметная документация", "desc": "Сводный сметный расчёт и локальные сметы: ПЗУ, покрытия, конструктивные и технологические решения, наружные сети, электроснабжение и газоснабжение.", "docs": [{"id": "energokompleks/ssr", "name": "Сводный сметный расчёт", "total": 2, "pages": [{"n": 1, "src": "works/energokompleks/ssr-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/energokompleks/ssr-p02.webp", "w": 1400, "h": 990}]}, {"id": "energokompleks/lsr-pzu", "name": "ЛСР — ПЗУ (планировочная организация участка)", "total": 4, "pages": [{"n": 1, "src": "works/energokompleks/lsr-pzu-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/energokompleks/lsr-pzu-p02.webp", "w": 1400, "h": 990}, {"n": 3, "src": "works/energokompleks/lsr-pzu-p03.webp", "w": 1400, "h": 990}, {"n": 4, "src": "works/energokompleks/lsr-pzu-p04.webp", "w": 1400, "h": 990}]}, {"id": "energokompleks/lsr-pokrytiya", "name": "ЛСР — щебёночные покрытия", "total": 6, "pages": [{"n": 1, "src": "works/energokompleks/lsr-pokrytiya-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/energokompleks/lsr-pokrytiya-p02.webp", "w": 1400, "h": 990}, {"n": 5, "src": "works/energokompleks/lsr-pokrytiya-p05.webp", "w": 1400, "h": 990}, {"n": 6, "src": "works/energokompleks/lsr-pokrytiya-p06.webp", "w": 1400, "h": 990}]}, {"id": "energokompleks/lsr-kr", "name": "ЛСР — КР (конструктивные решения)", "total": 35, "pages": [{"n": 1, "src": "works/energokompleks/lsr-kr-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/energokompleks/lsr-kr-p02.webp", "w": 1400, "h": 990}, {"n": 34, "src": "works/energokompleks/lsr-kr-p34.webp", "w": 1400, "h": 990}, {"n": 35, "src": "works/energokompleks/lsr-kr-p35.webp", "w": 1400, "h": 990}]}, {"id": "energokompleks/lsr-th", "name": "ЛСР — ТХ (технологические решения, ИОС7)", "total": 4, "pages": [{"n": 1, "src": "works/energokompleks/lsr-th-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/energokompleks/lsr-th-p02.webp", "w": 1400, "h": 990}, {"n": 3, "src": "works/energokompleks/lsr-th-p03.webp", "w": 1400, "h": 990}, {"n": 4, "src": "works/energokompleks/lsr-th-p04.webp", "w": 1400, "h": 990}]}, {"id": "energokompleks/lsr-nar-seti", "name": "ЛСР — наружные сети (ИОС5)", "total": 10, "pages": [{"n": 1, "src": "works/energokompleks/lsr-nar-seti-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/energokompleks/lsr-nar-seti-p02.webp", "w": 1400, "h": 990}, {"n": 9, "src": "works/energokompleks/lsr-nar-seti-p09.webp", "w": 1400, "h": 990}, {"n": 10, "src": "works/energokompleks/lsr-nar-seti-p10.webp", "w": 1400, "h": 990}]}, {"id": "energokompleks/lsr-en", "name": "ЛСР — наружное электроснабжение (ИОС1)", "total": 12, "pages": [{"n": 1, "src": "works/energokompleks/lsr-en-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/energokompleks/lsr-en-p02.webp", "w": 1400, "h": 990}, {"n": 11, "src": "works/energokompleks/lsr-en-p11.webp", "w": 1400, "h": 990}, {"n": 12, "src": "works/energokompleks/lsr-en-p12.webp", "w": 1400, "h": 990}]}, {"id": "energokompleks/lsr-gaz", "name": "ЛСР — наружное газоснабжение (ИОС6)", "total": 16, "pages": [{"n": 1, "src": "works/energokompleks/lsr-gaz-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/energokompleks/lsr-gaz-p02.webp", "w": 1400, "h": 990}, {"n": 15, "src": "works/energokompleks/lsr-gaz-p15.webp", "w": 1400, "h": 990}, {"n": 16, "src": "works/energokompleks/lsr-gaz-p16.webp", "w": 1400, "h": 990}]}], "thumb": "works/energokompleks/thumb.webp"}, {"slug": "transformatory", "title": "Замена силовых трансформаторов на производственном предприятии", "tag": "Исполнительная документация", "desc": "Сводный сметный расчёт, исполнительные локальные сметы по электроснабжению и вентиляции, конъюнктурный анализ.", "docs": [{"id": "transformatory/ssr", "name": "Сводный сметный расчёт", "total": 2, "pages": [{"n": 1, "src": "works/transformatory/ssr-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/transformatory/ssr-p02.webp", "w": 1400, "h": 990}]}, {"id": "transformatory/ilsr-es1", "name": "Исполнительная ЛСР — замена силовых трансформаторов", "total": 31, "pages": [{"n": 1, "src": "works/transformatory/ilsr-es1-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/transformatory/ilsr-es1-p02.webp", "w": 1400, "h": 990}, {"n": 30, "src": "works/transformatory/ilsr-es1-p30.webp", "w": 1400, "h": 990}, {"n": 31, "src": "works/transformatory/ilsr-es1-p31.webp", "w": 1400, "h": 990}]}, {"id": "transformatory/ilsr-es2", "name": "Исполнительная ЛСР — замена оборудования РУ 0,4 кВ", "total": 32, "pages": [{"n": 1, "src": "works/transformatory/ilsr-es2-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/transformatory/ilsr-es2-p02.webp", "w": 1400, "h": 990}, {"n": 31, "src": "works/transformatory/ilsr-es2-p31.webp", "w": 1400, "h": 990}, {"n": 32, "src": "works/transformatory/ilsr-es2-p32.webp", "w": 1400, "h": 990}]}, {"id": "transformatory/ilsr-ov", "name": "Исполнительная ЛСР — система вентиляции", "total": 25, "pages": [{"n": 1, "src": "works/transformatory/ilsr-ov-p01.webp", "w": 1400, "h": 990}, {"n": 2, "src": "works/transformatory/ilsr-ov-p02.webp", "w": 1400, "h": 990}, {"n": 24, "src": "works/transformatory/ilsr-ov-p24.webp", "w": 1400, "h": 990}, {"n": 25, "src": "works/transformatory/ilsr-ov-p25.webp", "w": 1400, "h": 990}]}, {"id": "transformatory/ka", "name": "Конъюнктурный анализ цен", "total": 3, "pages": [{"n": 1, "src": "works/transformatory/ka-p01.webp", "w": 1800, "h": 1273}, {"n": 2, "src": "works/transformatory/ka-p02.webp", "w": 1800, "h": 1273}, {"n": 3, "src": "works/transformatory/ka-p03.webp", "w": 1800, "h": 1273}]}], "thumb": "works/transformatory/thumb.webp"}]</script>
+  <script>
+(function () {
+  var data = JSON.parse(document.getElementById('works-data').textContent);
+  var docs = {};
+  data.forEach(function (card) {
+    card.docs.forEach(function (d) { d.card = card.title; docs[d.id] = d; });
+  });
+
+  function plural(n, one, few, many) {
+    var m10 = n % 10, m100 = n % 100;
+    if (m10 === 1 && m100 !== 11) return one;
+    if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+    return many;
+  }
+
+  var viewer = document.getElementById('viewer');
+  var stage = viewer.querySelector('.viewer-stage');
+  var img = viewer.querySelector('.viewer-img');
+  var gap = viewer.querySelector('.viewer-gap');
+  var loading = viewer.querySelector('.viewer-loading');
+  var titleEl = viewer.querySelector('.viewer-title');
+  var countEl = viewer.querySelector('.viewer-count');
+  var prevBtn = viewer.querySelector('.viewer-prev');
+  var nextBtn = viewer.querySelector('.viewer-next');
+  var closeBtn = viewer.querySelector('.viewer-close');
+
+  var slides = [], idx = 0, doc = null, opener = null;
+  var s = 1, tx = 0, ty = 0;
+
+  function buildSlides(d) {
+    var out = [];
+    d.pages.forEach(function (p, i) {
+      if (i > 0) {
+        var prev = d.pages[i - 1].n;
+        if (p.n - prev > 1) out.push({ gap: true, from: prev + 1, to: p.n - 1 });
+      }
+      out.push(p);
+    });
+    return out;
+  }
+
+  function applyTransform() {
+    img.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + s + ')';
+    viewer.classList.toggle('zoomed', s > 1.01);
+  }
+
+  function resetZoom() { s = 1; tx = 0; ty = 0; applyTransform(); }
+
+  function clamp() {
+    var st = stage.getBoundingClientRect();
+    var L0 = img.offsetLeft, T0 = img.offsetTop;
+    var W = img.offsetWidth * s, H = img.offsetHeight * s;
+    if (W > st.width) tx = Math.min(-L0, Math.max(st.width - W - L0, tx));
+    else tx = (st.width - W) / 2 - L0;
+    if (H > st.height) ty = Math.min(-T0, Math.max(st.height - H - T0, ty));
+    else ty = (st.height - H) / 2 - T0;
+  }
+
+  // zoom so that the stage point (px, py) stays under the finger/cursor
+  function zoomAt(newS, px, py) {
+    newS = Math.max(1, Math.min(5, newS));
+    var ox = px - img.offsetLeft, oy = py - img.offsetTop;
+    tx = ox - (ox - tx) * (newS / s);
+    ty = oy - (oy - ty) * (newS / s);
+    s = newS;
+    if (s <= 1.01) { resetZoom(); return; }
+    clamp();
+    applyTransform();
+  }
+
+  function show(i) {
+    idx = Math.max(0, Math.min(slides.length - 1, i));
+    var sl = slides[idx];
+    resetZoom();
+    prevBtn.disabled = idx === 0;
+    nextBtn.disabled = idx === slides.length - 1;
+    if (sl.gap) {
+      img.hidden = true;
+      loading.hidden = true;
+      gap.hidden = false;
+      gap.innerHTML = '… ' + (sl.from === sl.to ? 'лист ' + sl.from + ' не показан' : 'листы ' + sl.from + '–' + sl.to + ' не показаны') +
+        ' …<small>В портфолио показаны первые и последние листы документа. Всего в документе ' +
+        doc.total + ' ' + plural(doc.total, 'лист', 'листа', 'листов') + '.</small>';
+      countEl.textContent = 'Пропуск: ' + (sl.to - sl.from + 1) + ' ' + plural(sl.to - sl.from + 1, 'лист', 'листа', 'листов');
+    } else {
+      gap.hidden = true;
+      img.hidden = false;
+      loading.hidden = false;
+      img.removeAttribute('src');
+      img.width = sl.w; img.height = sl.h;
+      img.alt = doc.name + ', лист ' + sl.n + ' из ' + doc.total;
+      img.onload = function () { loading.hidden = true; };
+      img.src = sl.src;
+      countEl.textContent = 'Лист ' + sl.n + ' из ' + doc.total;
+    }
+    [idx - 1, idx + 1].forEach(function (j) {
+      if (slides[j] && !slides[j].gap) { var pre = new Image(); pre.src = slides[j].src; }
+    });
+  }
+
+  function open(id, from) {
+    doc = docs[id];
+    if (!doc) return;
+    opener = from || null;
+    slides = buildSlides(doc);
+    titleEl.innerHTML = '';
+    titleEl.appendChild(document.createTextNode(doc.name));
+    var sm = document.createElement('small');
+    sm.textContent = doc.card;
+    titleEl.appendChild(sm);
+    viewer.hidden = false;
+    document.body.classList.add('viewer-open');
+    show(0);
+    closeBtn.focus();
+  }
+
+  function close() {
+    viewer.hidden = true;
+    document.body.classList.remove('viewer-open');
+    img.removeAttribute('src');
+    if (opener) opener.focus();
+  }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-doc]');
+    if (b) { e.preventDefault(); open(b.getAttribute('data-doc'), b); }
+  });
+  prevBtn.addEventListener('click', function () { show(idx - 1); });
+  nextBtn.addEventListener('click', function () { show(idx + 1); });
+  closeBtn.addEventListener('click', close);
+
+  document.addEventListener('keydown', function (e) {
+    if (viewer.hidden) return;
+    if (e.key === 'Escape') { e.preventDefault(); if (s > 1.01) resetZoom(); else close(); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); show(idx - 1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); show(idx + 1); }
+    else if (e.key === 'Tab') {
+      var f = [closeBtn, prevBtn, nextBtn].filter(function (x) { return !x.disabled; });
+      var k = f.indexOf(document.activeElement);
+      e.preventDefault();
+      f[(k + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+    }
+  });
+
+  // pointer handling: click to zoom, drag to pan, pinch to zoom, swipe to change page
+  var pts = {}, start = null, pinch = null;
+  function stagePoint(e) { var r = stage.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
+
+  stage.addEventListener('pointerdown', function (e) {
+    if (e.target.closest('button')) return;
+    stage.setPointerCapture(e.pointerId);
+    pts[e.pointerId] = stagePoint(e);
+    var ids = Object.keys(pts);
+    if (ids.length === 2) {
+      var a = pts[ids[0]], b = pts[ids[1]];
+      pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), s: s };
+      start = null;
+    } else if (ids.length === 1) {
+      start = { x: pts[e.pointerId].x, y: pts[e.pointerId].y, tx: tx, ty: ty, moved: false, onImg: e.target === img };
+    }
+  });
+
+  stage.addEventListener('pointermove', function (e) {
+    if (!pts[e.pointerId]) return;
+    pts[e.pointerId] = stagePoint(e);
+    var ids = Object.keys(pts);
+    if (pinch && ids.length === 2 && !img.hidden) {
+      var a = pts[ids[0]], b = pts[ids[1]];
+      var d = Math.hypot(a.x - b.x, a.y - b.y);
+      zoomAt(pinch.s * d / pinch.d, (a.x + b.x) / 2, (a.y + b.y) / 2);
+      return;
+    }
+    if (!start) return;
+    var p = pts[e.pointerId], dx = p.x - start.x, dy = p.y - start.y;
+    if (Math.abs(dx) > 6 || Math.abs(dy) > 6) start.moved = true;
+    if (s > 1.01 && start.moved) {
+      viewer.classList.add('dragging');
+      tx = start.tx + dx; ty = start.ty + dy;
+      clamp(); applyTransform();
+    }
+  });
+
+  function endPointer(e) {
+    if (!pts[e.pointerId]) return;
+    var p = pts[e.pointerId];
+    delete pts[e.pointerId];
+    viewer.classList.remove('dragging');
+    if (pinch) { if (Object.keys(pts).length < 2) pinch = null; start = null; return; }
+    if (!start) return;
+    var dx = p.x - start.x;
+    if (!start.moved && start.onImg && e.type === 'pointerup') {
+      if (s > 1.01) resetZoom();
+      else zoomAt(Math.max(2.2, Math.min(4, img.naturalWidth / img.offsetWidth)), p.x, p.y);
+    } else if (s <= 1.01 && Math.abs(dx) > 50) {
+      show(idx + (dx < 0 ? 1 : -1));
+    }
+    start = null;
+  }
+  stage.addEventListener('pointerup', endPointer);
+  stage.addEventListener('pointercancel', endPointer);
+
+  stage.addEventListener('wheel', function (e) {
+    if (img.hidden) return;
+    e.preventDefault();
+    var p = stagePoint(e);
+    zoomAt(s * (e.deltaY < 0 ? 1.15 : 1 / 1.15), p.x, p.y);
+  }, { passive: false });
+
+  window.addEventListener('resize', function () { if (!viewer.hidden) resetZoom(); });
+})();
+  </script>
+</body>
+</html>
